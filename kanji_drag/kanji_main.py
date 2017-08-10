@@ -6,20 +6,22 @@ Created on Jul 29, 2017
 
 import Tkinter
 import ttk
+import re
+import deck_converter
 
 class InitializeGUI:
     def __init__(self, master):
         self.master = master
-        master.title("KanjiDrag")
+        self.master.title("KanjiDrag")
         
         #The skeleton of the GUI:
         #containerFrame is outermost frame of all frames within master window
         self.containerFrame = ttk.Frame(master)
         self.containerFrame.pack(fill="both", expand="1")                       #expands all direction to fill window resize
         
-        #menuFrame is thin frame at top of containerFrame container only Menu button
+        #menuFrame is thin frame at top of containerFrame containing only Menu button
         #IDEA: maybe include info about where in deck you are, and where in set you are? (though breaks dynamicFrame naming logic)
-        self.menuFrame = ttk.Frame(self.containerFrame)
+        self.menuFrame = ttk.Frame(self.containerFrame, borderwidth="3", relief="groove")
         self.menuFrame.pack(fill="x", side="top")                               #intended to always be on top and only expand horizontally
         self.toMenuButton = ttk.Button(self.menuFrame, text="Back to Menu")
         self.toMenuButton.pack(side="left")                                     #button left-justified
@@ -55,7 +57,43 @@ class InitializeGUI:
         self.dragLabel = ttk.Label(self.dragFrame, text="Drag This")
         self.dragLabel.pack()
 
+#The following function is a partial WIP that may be unnecessary in the future:
+#Turns one set of cards from deck file into a python list:
+#first: first card in practice set.    #size: size of practice set
+#def listify_deck_set( deck_file, first, size ):
+#    deck = open(deck_file)
+#    output = open('testfile.txt', 'w')
+#    
+#    for line in range(first, size+1):   #end condition is non-inclusive, therefore must add 1 to size in loop params
+#        line = deck.readline()
+#        #data = re.split(r'^[a-zA-Z0-9]*$', line)    #put this in try block
+#        #print data
+#        #output.write(data)
+#        
+#    deck.close()
+#    output.close()
+    
 if __name__ == '__main__':
     root = Tkinter.Tk()
-    kanjiGUI = InitializeGUI(root)
+    kanjiGUI = InitializeGUI(root)  #initializes skeleton of GUI
+    
+    #Game Mode flags:
+    #eng_drag: If False: Kanji will be in dragFrame. If True: English will be in dragFrame
+    #reading_drag: if None: reading will not be shown. If False, kana will be shown in dropFrame. If True: kana will be shown in dragFrame
+    #the "reading" should be the kana reading of the corresponding kanji.
+    eng_drag = False                                                             
+    reading_drag = None
+    start_position = 0      #where in deck to begin set
+    practice_set_size = 0   #number of cards practiced at a time
+    
+    #example data:
+    start_position = 1
+    practice_set_size = 5
+    reading_drag = False
+    
+    #Currently, deck_converter is hard-coded to open alongside with kanji_main. This can be prevented by commenting out the following line
+    deck_converter_window = deck_converter.deck_converter(root)
+    #TODO: An os independent solution to selecting and opening a file
+
+
     root.mainloop()
