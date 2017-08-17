@@ -22,9 +22,8 @@ A WIP Drag and Drop Game to aid in learning Kanji
     
   Note:
     There is a lot of junky test and placeholder code in several of the modules, due to me jumping between working on several features at once. I anticipate a major module restructuring and feature add in the next version, during which this code will be cleaned up and/or removed. A majority of the GUI skeleton for each window is now complete, and there will soon be more of a focus on the code for the underlying functionality of the program.
-    
-.    
-.
+
+
 
 2017/10/08 Version 0.0.1a
   Changes:
@@ -42,8 +41,8 @@ A WIP Drag and Drop Game to aid in learning Kanji
   Note to Self:
   Comments could definitely use a major overhaul to comply with pythonic standards and improve readability/ease in hiding comments
 
-.
-.
+
 
 2017/05/08 Version 0.0.0a
+
   Committed basic skeleton of GUI.
