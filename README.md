@@ -3,27 +3,27 @@ A WIP Drag and Drop Game to aid in learning Kanji
 
 2017/17/08 Version 0.0.2a
   Changes:
-    Several modules added
+  Several modules added
     
-    GUI code moved from main function to new class
+  GUI code moved from main function to new class
     
-    Major restucture and renaming
+  Major restucture and renaming
     
-    Various test code and placeholder codeadded
+  Various test code and placeholder codeadded
     
   Details:
-    Several modules added in effort to improve struture and facilitate a more logical bundling code.
+  Several modules added in effort to improve struture and facilitate a more logical bundling code.
     
-    There are now distinct GUI classes for each window of the program, and distinct modules of functions respective to each GUI class.
+  There are now distinct GUI classes for each window of the program, and distinct modules of functions respective to each GUI class.
     
-    Some classes, functions, and variables have been renamed to conform to a more pythonic naming convention
+  Some classes, functions, and variables have been renamed to conform to a more pythonic naming convention
     
-    There is now a MainMenu window with buttons that allow you to click to open a particular window for viewing.
+  There is now a MainMenu window with buttons that allow you to click to open a particular window for viewing.
     
   Note:
     There is a lot of junky test and placeholder code in several of the modules, due to me jumping between working on several features at once. I anticipate a major module restructuring and feature add in the next version, during which this code will be cleaned up and/or removed. A majority of the GUI skeleton for each window is now complete, and there will soon be more of a focus on the code for the underlying functionality of the program.
-    
-
+*    
+*
 2017/10/08 Version 0.0.1a
   Changes:
   Added some test variables and values for future utilization with GUI callbacks and program logic
@@ -39,6 +39,7 @@ A WIP Drag and Drop Game to aid in learning Kanji
 
   Note to Self:
   Comments could definitely use a major overhaul to comply with pythonic standards and improve readability/ease in hiding comments
-
+*
+*
 2017/05/08 Version 0.0.0a
   Committed basic skeleton of GUI.
