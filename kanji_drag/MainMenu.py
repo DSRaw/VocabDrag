@@ -14,7 +14,7 @@ from GameGUI import GameGUI
 from TestClass import TestClass
 
 def open_converter_window(top):
-    converter_window = DeckConverterGUI(top)
+    DeckConverterGUI(top)
     
 def open_game_window(top):
     game_window = GameGUI(top)
