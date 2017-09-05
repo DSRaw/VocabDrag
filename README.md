@@ -19,7 +19,7 @@ Test code and placeholder code moderately cleaned up
 
 *Details:*
 
-Deck conversion is now nearly complete in theory. Code parses and works with the data from the deck files correctly.
+Deck conversion is now nearly complete in theory. Code parses and manipulates the data from the deck files correctly.
 
 DeckConverterGUI will now display a sample card from the deck and allow a user to chose which fields to use in the conversion.
 
