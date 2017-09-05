@@ -3,6 +3,34 @@
 
 **A WIP Drag and Drop Game to aid in learning Kanji**
 
+***2017/5/09 Version 0.0.3a***
+
+*Changes:*
+
+Major feature add to DeckConverter and DeckConverterGUI module
+
+Logic for deck conversion is nearly complete
+
+DeckConverterGUI now achieves the majority of it's display functionality
+
+Some restructure of DeckConverter module and refactoring of DeckConverterGUI class
+
+Test code and placeholder code moderately cleaned up
+
+*Details:*
+
+Deck conversion is now nearly complete in theory. Code parses and works with the data from the deck files correctly.
+
+DeckConverterGUI will now display a sample card from the deck and allow a user to chose which fields to use in the conversion.
+
+DeckConverterGUI instantiation logic alleviates many, if not all potential issues with leftover data in DeckConverter module.
+
+DeckConverter module has been refactored to reduce some of the need for global variables.
+
+*Note:*
+
+The DeckConverter module still needs much refinement to catch exceptions and invalid input. It also still needs code that will output the converted deck to a new file. It can also still use a moderate amount of refactoring to tighten up variable access and loops. I anticipate the next commit consisting mainly of adding and refining the above requirements. The next major feature update will likely involve the Game logic and some prefunctory MainMenu code to draft the overall vision of what features the user ought to be able to select and how to include them in the game instance.
+
 ***2017/17/08 Version 0.0.2a***
 
 *Changes:*
