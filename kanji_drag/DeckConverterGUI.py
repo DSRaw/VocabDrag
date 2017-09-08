@@ -4,10 +4,10 @@ Created on Aug 6, 2017
 @author: Daphne
 '''
 import Tkinter
+import tkFont
 import ttk
 
 import DeckConverter 
-import tkFont
 #TODO: import DeckConverter as DC for brevity. Update button commands accordingly
  
 class DeckConverterGUI(object):
@@ -29,7 +29,7 @@ class DeckConverterGUI(object):
         self.deckConverterRoot.resizable("true","true")                         #might set this to false later to make this a fixed-width window.
         self.deckConverterRoot.minsize(width="640", height="360")               #a minimum 16:9 aspect ratio I chose based on personal preference
         
-        #The following function destroys current deck converter object and starts a fresh object
+        #The following function destroys current deck converter object and starts a fresh object. Called when user chooses to convert another deck.
         def new_DeckConverterGUI(top = master):                                 #passes the same MainMenuGUI instance as master to new DeckConverterGUI instance
             self.deckConverterRoot.destroy()
             DeckConverterGUI(top)
@@ -45,6 +45,14 @@ class DeckConverterGUI(object):
         self.browseLabel.pack(side="left")
         self.browseButton = ttk.Button(self.browseFrame, text="browse", command=DeckConverter.browse_filesystem)   #on click, triggers browseFileSystem function
         self.browseButton.pack(side="left")
+        
+        self.file_path = Tkinter.StringVar()
+        self.file_path.set("No file selected.")
+        self.entry_font = tkFont.Font(family="TkFixedFont", size="10")          #Fixed width font is necessary to dynamically shorten file_path to fit the window on resize
+        
+        self.pathEntry = ttk.Entry(self.browseFrame, textvariable=self.file_path, font=self.entry_font, state="readonly")            #Will display the file path of selected file
+        self.pathEntry.pack(side="left", fill="x", expand="1")
+        self.pathEntry.bind("<Configure>", lambda event : DeckConverter.resize_path_display(self.pathEntry))    #TODO Use the format to replace curObj convention
         
         #dataFrame will contain the two frames that display an example card of the deck and allow a user to select data from it
         self.dataFrame = ttk.Frame(self.containerFrame, borderwidth="3", relief="groove")
@@ -92,7 +100,7 @@ class DeckConverterGUI(object):
         self.vocabLabelFrame = ttk.LabelFrame(self.chooseFrame, text="Vocab Word:", borderwidth="3", relief="groove")               #vocabulary word
         self.vocabLabelFrame.pack(fill="both", expand="1")
         self.combo_choice = Tkinter.StringVar(self.vocabLabelFrame)                                                                 #variable that will store the selected choice
-        self.vocabCombobox = ttk.Combobox(self.vocabLabelFrame, textvariable=self.combo_choice)
+        self.vocabCombobox = ttk.Combobox(self.vocabLabelFrame)
         self.vocabCombobox.pack(anchor="center", expand="1")
         
         self.transLabelFrame = ttk.LabelFrame(self.chooseFrame, text="Translation of Vocab:", borderwidth="3", relief="groove")     #translation of vocab word
