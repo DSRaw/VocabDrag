@@ -4,7 +4,7 @@
 ***2017/5/09 Version 0.0.4a***
 
 *Note:* 
-I have realized a need for a change in the version formatting. From this commit onward, I will use the third digit in the naming format to indicate intermediate or non-functional WIP commits where new features are partially complete and being actively worked on.
+I have realized a need for a change in the version formatting. From this commit onward, I will use the third digit in the naming format to indicate intermediate or non-functional WIP commits where new features are partially complete and there is evidence in the code of them being actively worked on.
 
 Workable versions where chucnks of features and code are considered to be completed and in a working state will be indicated by the second digit of the version format.
 
