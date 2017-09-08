@@ -1,9 +1,12 @@
 
 **A WIP Drag and Drop Game to aid in learning Kanji**
+
 ***2017/8/09 Version 0.0.5a***
+
 Another intermediate commit.
 
 *Changes:*
+
 Cleaned up directory mishap after last commit.
 Dynamic resizing of the file path displayed after browsing for a file in the DeckConverter window is now functional.
 There is still some junk code and significant refactoring to be done before this can be considered a clean commit.
