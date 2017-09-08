@@ -1,5 +1,24 @@
 
+**A WIP Drag and Drop Game to aid in learning Kanji**
 
+***2017/5/09 Version 0.0.4a***
+
+*Note:* 
+I have realized a need for a change in the version formatting. From this commit onward, I will use the third digit in the naming format to indicate intermediate or non-functional WIP commits where new features are partially complete and being actively worked on.
+
+Workable versions where chucnks of features and code are considered to be completed and in a working state will be indicated by the second digit of the version format.
+
+Release versions considered to have full base-functionality and clean code with no WIP bits strewn about will be indicated by the first digit of the format.
+
+I may retroactively apply this to past version commits, but I must review past commit history to determine how their versions should be revised. Until then, be mindful when seeing the past version numbers.
+
+*Changes:*
+
+Screwed up the filesystem with this commit. Will fix in next commit, coming very soon.
+
+This is an intermediate commit. Code is currently not to be considered in a functional state. It will run, but not as intended.
+
+Lots of dirty test variables, functions, and funky logic in this one. About to undergo a major function rewrite and feature update. This commit has a semi-workable new function in the DeckConverter module intended to facilitate the display of the file path after a user selects a file in the DeckConverter GUI. This function needs a logic update to calculate how much of the file path to display based on the pixel-width of the entry widget and characters of the font. Will be deleting, adding, and rewriting a lot of code before the next commit.
 
 **A WIP Drag and Drop Game to aid in learning Kanji**
 
