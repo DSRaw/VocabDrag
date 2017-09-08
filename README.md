@@ -6,7 +6,7 @@
 *Note:* 
 I have realized a need for a change in the version formatting. From this commit onward, I will use the third digit in the naming format to indicate intermediate or non-functional WIP commits where new features are partially complete and there is evidence in the code of them being actively worked on.
 
-Workable versions where chucnks of features and code are considered to be completed and in a working state will be indicated by the second digit of the version format.
+Workable versions where chunks of features and code are considered to be completed and in a working state will be indicated by the second digit of the version format.
 
 Release versions considered to have full base-functionality and clean code with no WIP bits strewn about will be indicated by the first digit of the format.
 
@@ -14,7 +14,7 @@ I may retroactively apply this to past version commits, but I must review past c
 
 *Changes:*
 
-Screwed up the filesystem with this commit. Will fix in next commit, coming very soon. Currently, the files outside the KanjiDrag folder are considered to be the most up-to-date files
+Screwed up the filesystem with this commit. Will fix in next commit, coming very soon. Currently, the files outside the KanjiDrag folder are considered to be the most up-to-date files.
 
 This is an intermediate commit. Code is currently not to be considered in a functional state. It will run, but not as intended.
 
