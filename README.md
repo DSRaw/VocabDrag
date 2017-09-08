@@ -14,7 +14,7 @@ I may retroactively apply this to past version commits, but I must review past c
 
 *Changes:*
 
-Screwed up the filesystem with this commit. Will fix in next commit, coming very soon.
+Screwed up the filesystem with this commit. Will fix in next commit, coming very soon. Currently, the files outside the KanjiDrag folder are considered to be the most up-to-date files
 
 This is an intermediate commit. Code is currently not to be considered in a functional state. It will run, but not as intended.
 
