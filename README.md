@@ -21,7 +21,7 @@ DeckConverter module still needs a lot of error catching code and a refactor to 
 
 *Notes to self:*
 
-The above mentioned "run again" functionality could perhaps be achieved by dynamically changing the test and binded function of the single DeckConverter button after a click.
+The above mentioned "run again" functionality could perhaps be achieved by dynamically changing the text and binded function of the single "Convert Deck" button after a click.
 
 ***2017/8/09 Version 0.0.5a***
 
