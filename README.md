@@ -1,6 +1,28 @@
 
 **A WIP Drag and Drop Game to aid in learning Kanji**
 
+***2017/9/09 Version 0.0.6a***
+
+*Changes:*
+
+Completed logic for dynamic resizing of file path display on window resize.
+
+Added functions in DeckConverterGUI and DeckConverter to implement functionality of "Convert a new deck" button, while ensuring data from previous conversion is purged between sessions.
+
+Added and refactored some functions for better seperation of logic and brevity.
+
+Cleaned up most, if not all test code and defunct comments.
+
+*Note:*
+
+Still need to write logic to remove/hide/unpack original "Convert Deck" button after a conversion has already run once. Once this is written, commit can be merged into master branch as a feature update.
+
+DeckConverter module still needs a lot of error catching code and a refactor to tighten up variable and function access.
+
+*Notes to self:*
+
+The above mentioned "run again" functionality could perhaps be achieved by dynamically changing the test and binded function of the single DeckConverter button after a click.
+
 ***2017/8/09 Version 0.0.5a***
 
 Another intermediate commit.
