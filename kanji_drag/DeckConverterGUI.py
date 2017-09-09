@@ -30,7 +30,8 @@ class DeckConverterGUI(object):
         self.deckConverterRoot.minsize(width="640", height="360")               #a minimum 16:9 aspect ratio I chose based on personal preference
         
         #The following function destroys current deck converter object and starts a fresh object. Called when user chooses to convert another deck.
-        def new_DeckConverterGUI(top = master):                                 #passes the same MainMenuGUI instance as master to new DeckConverterGUI instance
+        def new_session(top = master):                                 #passes the same MainMenuGUI instance as master to new DeckConverterGUI instance
+            DeckConverter.reset_session()
             self.deckConverterRoot.destroy()
             DeckConverterGUI(top)
         
@@ -47,12 +48,11 @@ class DeckConverterGUI(object):
         self.browseButton.pack(side="left")
         
         self.file_path = Tkinter.StringVar()
-        self.file_path.set("No file selected.")
         self.entry_font = tkFont.Font(family="TkFixedFont", size="10")          #Fixed width font is necessary to dynamically shorten file_path to fit the window on resize
         
         self.pathEntry = ttk.Entry(self.browseFrame, textvariable=self.file_path, font=self.entry_font, state="readonly")            #Will display the file path of selected file
         self.pathEntry.pack(side="left", fill="x", expand="1")
-        self.pathEntry.bind("<Configure>", lambda event : DeckConverter.resize_path_display(self.pathEntry))    #TODO Use the format to replace curObj convention
+        self.pathEntry.bind("<Configure>", lambda event : DeckConverter.resize_path_display())    #TODO Use the format to replace curObj convention
         
         #dataFrame will contain the two frames that display an example card of the deck and allow a user to select data from it
         self.dataFrame = ttk.Frame(self.containerFrame, borderwidth="3", relief="groove")
@@ -123,6 +123,6 @@ class DeckConverterGUI(object):
         
         #The following button and label will only appear after the program has been run once. They will give the user the choice to convert a different deck
         self.runLabel = ttk.Label(self.runFrame, text="Your deck has been converted.", font="bold", foreground="#24a124", anchor="center")
-        self.rerunButton = ttk.Button(self.runFrame, text="Convert Another Deck?", command=new_DeckConverterGUI)
+        self.rerunButton = ttk.Button(self.runFrame, text="Convert Another Deck?", command=new_session)
         
         
